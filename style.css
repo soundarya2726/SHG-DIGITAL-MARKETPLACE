@@ -1,0 +1,89 @@
+.login-box {
+    width: 350px;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+}
+
+.login-box label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.login-box input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.login-box button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.product-card {
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.product-card h3 {
+    color: #2e7d32;
+}
+
+.product-card button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #1b5e20;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7f5;
+    text-align: center;
+}
+
+h1 {
+    background-color:green;
+    color: white;
+    padding: 25px;
+    margin: 0;
+}
+
+h2 {
+    color :#2e7d32;
+    margin-top: 50px;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+

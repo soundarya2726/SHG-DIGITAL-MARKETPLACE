@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Buy Product - SHG Digital Marketplace</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fff5fb, #f0fff4);
+        }
+
+        .header {
+            background: linear-gradient(90deg, #5b168b, #8e44ad);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .icon {
+            font-size: 80px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #542078;
+            font-size: 30px;
+        }
+
+        .description {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .price {
+            color: #8e2473;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        .buy {
+            background: linear-gradient(90deg, #6a1b9a, #9c27b0);
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            border-radius: 25px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .back {
+            display: block;
+            margin-top: 20px;
+            color: #6a1b9a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>🌱 SHG Digital Marketplace</h1>
+        <p>Product Details</p>
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+
+            <div class="icon">
+                🛍️
+            </div>
+
+            <h2>{{ product[1] }}</h2>
+
+            <p class="description">
+                {{ product[2] }}
+            </p>
+
+            <div class="price">
+                ₹{{ product[3] }}
+            </div>
+
+            <a href="/place-order/{{ product[0] }}"
+                class="buy"
+                style="display:inline-block; text-decoration:none;">
+                🛒 Place Order
+            </a>
+
+            <a href="/" class="back">
+                ← Back to Marketplace
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

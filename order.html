@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Place Order - SHG Digital Marketplace</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fff5fb, #f0fff4);
+        }
+
+        .header {
+            background: linear-gradient(90deg, #5b168b, #8e44ad);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        h2 {
+            text-align: center;
+            color: #542078;
+        }
+
+        .product {
+            background: #f7efff;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .product h3 {
+            color: #542078;
+        }
+
+        .price {
+            color: #8e2473;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 90px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 14px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #6a1b9a, #9c27b0);
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 18px;
+            color: #6a1b9a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>🌱 SHG Digital Marketplace</h1>
+
+        <p>Place Your Order</p>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>🛒 Order Details</h2>
+
+
+            <div class="product">
+
+                <h3>{{ product[1] }}</h3>
+
+                <p>{{ product[2] }}</p>
+
+                <div class="price">
+                    ₹{{ product[3] }}
+                </div>
+
+            </div>
+
+
+            <form method="POST"
+                  action="/place-order/{{ product[0] }}">
+
+                <label>Customer Name</label>
+
+                <input
+                    type="text"
+                    name="customer_name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label>Phone Number</label>
+
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+
+
+                <label>Delivery Address</label>
+
+                <textarea
+                    name="address"
+                    placeholder="Enter your delivery address"
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    📦 Confirm Order
+                </button>
+
+            </form>
+
+
+            <a href="/" class="back">
+                ← Back to Marketplace
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
