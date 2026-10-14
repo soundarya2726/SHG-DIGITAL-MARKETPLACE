@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - SHG Digital Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a1b9a, #ce93d8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .form-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 320px;
+            max-width: 85%;
+            box-shadow: 0 5px 20px #0002;
+        }
+        h2 { color: #6a1b9a; text-align: center; }
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            margin: 9px 0;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #6a1b9a;
+            color: white;
+            border: 0;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        a { color: #6a1b9a; }
+        .links { text-align: center; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>Create Account</h2>
+        <form method="POST" action="/register">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+        <div class="links">
+            <p>Already registered? <a href="/login">Login</a></p>
+            <a href="/">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
